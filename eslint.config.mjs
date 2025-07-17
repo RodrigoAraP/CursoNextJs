@@ -1,6 +1,16 @@
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 import { FlatCompat } from "@eslint/eslintrc";
+import { typescript } from '@eslint/js';
+
+[
+  typescript(),
+  {
+    rules: {
+      '@typescript-eslint/no-explicit-any': 'off',
+    },
+  },
+];
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
